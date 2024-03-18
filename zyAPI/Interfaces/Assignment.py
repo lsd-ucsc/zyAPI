@@ -409,9 +409,9 @@ class Assignment(object):
 			includeTimeSpent=includeTimeSpent,
 		)
 
-		for due in dues:
+		for dIdx in range(1, len(dues)):
 			_, dfNext = self.ExportReportWithDue(
-				due=due,
+				due=dues[dIdx],
 				includeTimeSpent=includeTimeSpent,
 			)
 			for i in range(len(df.columns)):
